@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
+    <script src="main.js" type="module" defer></script>
   </head>
   <body>
     <div class="container">
@@ -13,7 +14,7 @@
       </div>
       <div class="player-score-1">
         <div class="player">
-          <span class="player-name" id="player-1-name">Player 1</span>
+          <span class="player-name" id="player-1-name">---</span>
           <span class="score loser" id="player-1-score">0</span>
         </div>
       </div>
@@ -22,15 +23,27 @@
           <span id="next-number">100</span>
           <button id="start-btn" hidden>Start</button>
         </div>
+        <button class="start-btn">Start</button>
       </div>
       <div class="player-score-2">
         <div class="player">
-          <span class="player-name" id="player-2-name">Player 2</span>
+          <span class="player-name" id="player-2-name">---</span>
           <span class="score winner" id="player-2-score">0</span>
         </div>
       </div>
       <div class="stock-1">
-        <div class="stock" id="stock-1"></div>
+        <ul class="stock" id="stock-1">
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+          <li>1 00:00:00 +1</li>
+        </ul>
       </div>
 
       <div class="panel">
@@ -139,8 +152,13 @@
         <div class="stock" id="stock-2"></div>
       </div>
       <div class="footer">
-        <h5 id="timetick">00:00:00</h5>
+        <h5 id="timetick">
+          <span id="timer-m">--</span> : <span id="timer-s">--</span> : <span id="timer-sss">--</span>
+        </h5>
       </div>
+    </div>
+    <div class="no-support">
+      <span>Please rotate your device to landscape mode!</span>
     </div>
   </body>
 </html>
