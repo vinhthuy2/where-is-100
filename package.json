@@ -4,7 +4,8 @@
   "description": "Vietnames paper game. Ther Numbers from 1 to 100 are distributed randomly among the grid/paper. Players will try to scramble those sequencial numbers as fast as possible by circle them on the paper. When the 100 found, the game ends. Who achieved more numbers will be the winner.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,15 @@
   },
   "homepage": "https://github.com/vinhthuy2/where-is-100#readme",
   "dependencies": {
-    "rxjs": "^6.6.2"
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "npm": "^7.19.1",
+    "rxjs": "^6.6.2",
+    "socket.io": "^4.1.3",
+    "socket.io-client": "^4.1.2",
+    "unique-names-generator": "^4.5.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.7.1"
   }
 }

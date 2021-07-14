@@ -1,5 +1,7 @@
 :root {
   font-family: "Ropa Sans", Tahoma, Verdana;
+  --player1-color: #ff3e61;
+  --player2-color: #37ff79;
 }
 
 * {
@@ -26,15 +28,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 div {
-  align-items: center;
+  /* align-items: center;
   display: flex;
   height: 100%;
   justify-content: center;
   color: white;
-  font-size: 20px;
+  font-size: 20px; */
+}
+
+.cover {
+  height: 100%;
+  flex-direction: column;
+  background-color: #f5cfd6;
 }
 
 .no-support {
@@ -51,16 +60,38 @@ div {
   flex-direction: column;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr 4fr 8fr 1fr;
+;
 }
 
 .header {
-  grid-column: 2 / span 1;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 1 / span 3;
   grid-row: 1 / span 1;
 }
 
+.invite {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: solid 1px white;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-column: 2 / span 1;
   grid-row: 4 / span 1;
+}
+
+.stock-container {
+  display: flex;
+  justify-content: center;
 }
 
 .stock-1 {
@@ -86,11 +117,16 @@ div {
 }
 
 .panel {
+  padding-left: 4rem;
+  padding-right: 4rem;
   grid-row: 3 / span 1;
-  grid-column: 2 / span 1;
+  grid-column: 1 / span 3;
 }
 
 .next-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
 }
@@ -110,7 +146,9 @@ div {
 
 #next-number-container.started {
   opacity: 1;
+
 }
+
 
 .next-box #next-number {
   font-style: normal;
@@ -119,6 +157,13 @@ div {
   line-height: 75px;
   color: #d8e07b;
   text-align: center;
+  width: 100%;
+}
+
+.player-score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .player-score-1 {
@@ -145,6 +190,9 @@ div {
 }
 
 .score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-style: normal;
   font-weight: normal;
   font-size: 108px;
@@ -171,15 +219,28 @@ div {
   border: 2px solid #0e8f52;
   user-select: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   /* position: absolute;
   height: 3rem;
   width: 3rem; */
 }
 
 .tile.solved {
-  color: #f5cfd6;
   cursor: not-allowed;
 }
+
+.tile.solved.player-1 {
+  color: var(--player1-color);
+}
+
+.tile.solved.player-2 {
+  color: var(--player2-color);
+}
+
+
 
 .tile:hover {
   background-color: rgba(27, 159, 89, 1);
